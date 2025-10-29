@@ -14,6 +14,8 @@ import { useColorScheme } from "react-native";
 import ThemedText from "@/presentation/shared/ThemedText";
 import { allRoutes } from "@/constants/Routes";
 
+
+import '../global.css'
 export default function RootLayout() {
   let colorScheme = useColorScheme();
   const backgroundColor = useThemeColor(
