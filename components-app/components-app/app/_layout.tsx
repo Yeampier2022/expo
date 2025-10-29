@@ -11,6 +11,7 @@ import {
 } from "@react-navigation/native";
 
 import { useColorScheme } from "react-native";
+import ThemedText from "@/presentation/shared/ThemedText";
 
 export default function RootLayout() {
   let colorScheme = useColorScheme();
@@ -26,10 +27,8 @@ export default function RootLayout() {
       }}
     >
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-        <ThemedView margin>
-          <Text className="mt-10 text-3xl text-light-text dark:text-dark-text">
-            Hola
-          </Text>
+        <ThemedView margin className="">
+          <ThemedText className="mt-20">Hola</ThemedText>
         </ThemedView>
       </ThemeProvider>
     </GestureHandlerRootView>
