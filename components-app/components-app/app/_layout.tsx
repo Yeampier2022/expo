@@ -12,11 +12,12 @@ import {
 
 import { useColorScheme } from "react-native";
 import ThemedText from "@/presentation/shared/ThemedText";
+import { allRoutes } from "@/constants/Routes";
 
 export default function RootLayout() {
   let colorScheme = useColorScheme();
   const backgroundColor = useThemeColor(
-    { light: "red", dark: "indigo" },
+    { light: "color-[#49129c]", dark: "indigo" },
     "background"
   );
   return (
@@ -27,9 +28,34 @@ export default function RootLayout() {
       }}
     >
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-        <ThemedView margin className="">
-          <ThemedText className="mt-20">Hola</ThemedText>
-        </ThemedView>
+        <Stack
+          screenOptions={{
+            headerShadowVisible: false,
+            contentStyle: {
+              backgroundColor: backgroundColor,
+            },
+            headerStyle: {
+              backgroundColor: backgroundColor,
+            },
+          }}
+        >
+          <Stack.Screen
+            name="index"
+            options={{
+              title: "",
+            }}
+          />
+
+          {allRoutes.map((route) => (
+            <Stack.Screen
+              key={route?.name}
+              name={route?.name}
+              options={{
+                title: route?.title,
+              }}
+            />
+          ))}
+        </Stack>
       </ThemeProvider>
     </GestureHandlerRootView>
   );

@@ -14,10 +14,10 @@ export const Colors = {
     background: '#f5f5f5',
   },
   dark: {
-    primary: '#7a4edc',
-    secondary: '#d138a8',
-    tertiary: '#ff527f',
-    success: '#3a9d78',
+    // primary: '#7a4edc',
+    // secondary: '#d138a8',
+    // tertiary: '#ff527f',
+    // success: '#3a9d78',
 
     text: '#ECEDEE',
     background: '#17202A',
