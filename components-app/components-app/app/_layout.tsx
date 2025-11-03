@@ -1,9 +1,7 @@
-import { Text, View } from "react-native";
 import "../global.css";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Stack } from "expo-router";
 import { useThemeColor } from "@/hooks/use-theme-color";
-import ThemedView from "@/presentation/shared/ThemedView";
 import {
   DarkTheme,
   DefaultTheme,
@@ -11,15 +9,13 @@ import {
 } from "@react-navigation/native";
 
 import { useColorScheme } from "react-native";
-import ThemedText from "@/presentation/shared/ThemedText";
 import { allRoutes } from "@/constants/Routes";
 
-
-import '../global.css'
+import "../global.css";
 export default function RootLayout() {
   let colorScheme = useColorScheme();
   const backgroundColor = useThemeColor(
-    { light: "color-[#49129c]", dark: "indigo" },
+    { light: "color-white", dark: "color-[#131e24]" },
     "background"
   );
   return (

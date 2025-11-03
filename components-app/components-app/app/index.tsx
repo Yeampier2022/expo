@@ -1,6 +1,5 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import React from "react";
-import { Href, Link } from "expo-router";
 import ThemedView from "@/presentation/shared/ThemedView";
 import {
   animationMenuRoutes,
@@ -8,7 +7,7 @@ import {
   uiMenuRoutes,
 } from "@/constants/Routes";
 import MenuItem from "@/presentation/menu/MenuItem";
-import "../global.css"
+import "../global.css";
 const index = () => {
   return (
     <ThemedView margin>
