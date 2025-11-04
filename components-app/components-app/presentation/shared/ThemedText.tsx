@@ -6,9 +6,9 @@ interface Props extends TextProps {
   type?: "normal" | "h1" | "h2" | "semi-bold" | "link";
 }
 const ThemedText = ({ className, type, ...rest }: Props) => {
-  // className="mt-10 text-3xl"
   return (
     <Text
+      style={{ textDecorationLine: "none" }}
       className={[
         "text-light-text dark:text-dark-text",
         type === "normal" ? "font-normal" : "underline",
