@@ -15,7 +15,7 @@ import "../global.css";
 export default function RootLayout() {
   let colorScheme = useColorScheme();
   const backgroundColor = useThemeColor(
-    { light: "color-white", dark: "color-[#131e24]" },
+    { light: "primary", dark: "primary" },
     "background"
   );
   return (
