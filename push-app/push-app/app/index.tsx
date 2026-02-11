@@ -1,12 +1,12 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from "react-native";
+import React from "react";
 
 const pushScrenn = () => {
   return (
     <View>
       <Text>pushScrenn</Text>
     </View>
-  )
-}
+  );
+};
 
-export default pushScrenn
+export default pushScrenn;

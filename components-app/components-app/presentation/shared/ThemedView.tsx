@@ -1,6 +1,6 @@
-import { View, Text, ViewProps } from "react-native";
-import React from "react";
 import { useThemeColor } from "@/hooks/use-theme-color";
+import React from "react";
+import { View, ViewProps } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 interface Props extends ViewProps {
@@ -24,7 +24,6 @@ const ThemedView = ({
       style={[
         {
           backgroundColor: backgroundColor,
-          flex: 1,
           paddingTop: safe ? safeArea.top : 0,
           marginHorizontal: margin ? 10 : 0,
         },
