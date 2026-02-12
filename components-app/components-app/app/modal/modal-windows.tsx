@@ -15,7 +15,7 @@ const modalScreen = () => {
       <ThemedText>Hola soy un modal</ThemedText>
       <ThemedButton
         className="my-4"
-        onPress={() => router.push("/modal/modal-windows 2")}
+        onPress={() => router.push("/modal/modal-windows2")}
       >
         Otro Modal
       </ThemedButton>

@@ -12,6 +12,7 @@ import { useColorScheme } from "react-native";
 import { allRoutes } from "@/constants/Routes";
 
 import "../global.css";
+import { ThemeChangerProvider } from "@/presentation/context/ThemedChangerContext";
 export default function RootLayout() {
   let colorScheme = useColorScheme();
   const backgroundColor = useThemeColor(
@@ -25,7 +26,7 @@ export default function RootLayout() {
         flex: 1,
       }}
     >
-      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+      <ThemeChangerProvider>
         <Stack
           screenOptions={{
             headerShadowVisible: false,
@@ -55,7 +56,7 @@ export default function RootLayout() {
             />
           ))}
         </Stack>
-      </ThemeProvider>
+      </ThemeChangerProvider>
     </GestureHandlerRootView>
   );
 }
